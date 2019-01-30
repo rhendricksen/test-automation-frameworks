@@ -23,4 +23,3 @@ The repository includes an example MEAN stack app which is used to run the tests
 
 
 ## Example test app
-MEAN Stack
