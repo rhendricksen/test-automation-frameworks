@@ -1,0 +1,30 @@
+{
+  "allowJs": true,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "outDir": "../../dist/out-tsc/apps/fe-it",
+    "target": "es2017",
+    "types": [
+      "protractor",
+      "jasmine",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
+    ]
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
