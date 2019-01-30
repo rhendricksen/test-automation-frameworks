@@ -4,6 +4,8 @@
   "description": "Awesome test automation frameworks",
   "main": "index.js",
   "scripts": {
+    "lint": "npm-run-all lint:*",
+    "lint:jasmine-protractor-ng-apimock": "tslint -p ./fe-it/jasmine-protractor-ng-apimock",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,13 +13,11 @@
     "url": "git+https://github.com/rhendricksen/awesome-test-automation-frameworks.git"
   },
   "keywords": [
-    "test",
-    "automation",
+    "test automation",
     "frameworks",
     "e2e",
     "it",
-    "visual",
-    "regression"
+    "visual regression"
   ],
   "author": "Richard Hendricksen",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
     "ng-apimock": "^1.4.7",
+    "npm-run-all": "^4.1.5",
     "protractor": "^5.4.2",
     "protractor-beautiful-reporter": "^1.2.7",
     "protractor-cucumber-framework": "^6.1.1",
