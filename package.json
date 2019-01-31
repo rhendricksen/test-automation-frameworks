@@ -3,11 +3,6 @@
   "version": "0.0.1",
   "description": "Awesome test automation frameworks",
   "main": "index.js",
-  "scripts": {
-    "lint": "npm-run-all lint:*",
-    "lint:jasmine-protractor-ng-apimock": "tslint -p ./fe-it/jasmine-protractor-ng-apimock",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rhendricksen/awesome-test-automation-frameworks.git"
@@ -24,6 +19,13 @@
   "bugs": {
     "url": "https://github.com/rhendricksen/awesome-test-automation-frameworks/issues"
   },
+  "scripts": {
+    "lint": "npm-run-all lint:*",
+    "lint:jasmine-protractor-ng-apimock": "tslint -p ./fe-it/jasmine-protractor-ng-apimock",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:jasmine-protractor-spectre": "protractor ./visual-regression/jasmine-protractor-spectre/config/protractor-base.conf.js",
+    "update-webdriver": "webdriver-manager update"
+  },
   "homepage": "https://github.com/rhendricksen/awesome-test-automation-frameworks#readme",
   "devDependencies": {
     "@types/jasmine": "^3.3.8",
@@ -31,11 +33,13 @@
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
     "ng-apimock": "^1.4.7",
+    "nodeclient-spectre": "^1.0.5",
     "npm-run-all": "^4.1.5",
     "protractor": "^5.4.2",
     "protractor-beautiful-reporter": "^1.2.7",
     "protractor-cucumber-framework": "^6.1.1",
     "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0",
+    "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
     "tslint-defocus": "^2.0.6",
     "typescript": "^3.2.4"
