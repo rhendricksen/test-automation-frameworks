@@ -1,0 +1,15 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "The frontend integration tests Cypress for testing and mocking.",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "node_modules/.bin/cypress run",
+    "cy:open": "node_modules/.bin/cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.1.5"
+  }
+}

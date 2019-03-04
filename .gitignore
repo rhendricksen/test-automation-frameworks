@@ -36,3 +36,5 @@ node_modules/
 ### Tests ###
 .tmp
 .reports
+videos
+test-results.xml

@@ -8,8 +8,9 @@ Included in the repository is an example MEAN stack app, which is used to run th
 ## Test frameworks
 
 ### Frontend integration testframeworks (FIT)
-- [Protractor/ng-apimock/jasmine](frameworks/fit/jasmine-protractor-ng-apimock/README.md)
+- [Jasmine/Protractor/ng-apimock](frameworks/fit/jasmine-protractor-ng-apimock/README.md)
 - Webdriverio/mocking/mocha
+- [Cypress](frameworks/fit/cypress/README.md)
 
 ### Backend integration testframeworks (BIT)
 - Rest assured
