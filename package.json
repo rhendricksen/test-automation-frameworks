@@ -20,11 +20,14 @@
     "url": "https://github.com/rhendricksen/awesome-test-automation-frameworks/issues"
   },
   "scripts": {
+    "postinstall": "cd example-test-app && yarn install",
     "lint": "npm-run-all lint:*",
     "lint:jasmine-protractor-ng-apimock": "tslint -p ./fe-it/jasmine-protractor-ng-apimock",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:jasmine-protractor-spectre": "protractor ./visual-regression/jasmine-protractor-spectre/config/protractor-base.conf.js",
-    "update-webdriver": "webdriver-manager update"
+    "update-webdriver": "webdriver-manager update",
+    "start:backend": "cd example-test-app && yarn start:server",
+    "start:frontend": "cd example-test-app && yarn start"
   },
   "homepage": "https://github.com/rhendricksen/awesome-test-automation-frameworks#readme",
   "devDependencies": {
