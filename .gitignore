@@ -17,6 +17,9 @@ taget
 # Log file
 *.log
 
+# misc
+.DS_store
+
 ### Node ###
 # Logs
 logs
