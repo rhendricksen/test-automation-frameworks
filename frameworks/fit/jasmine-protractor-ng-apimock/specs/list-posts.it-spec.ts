@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { browser } from 'protractor';
 
 import { PostsOverviewPage } from '../po/posts-overview.page';
-import * as typings from '../types';
+import * as typings from '../typings';
 
 const postsOverviewPage = new PostsOverviewPage();
 
