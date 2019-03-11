@@ -26,5 +26,5 @@ Included in the repository is an example test app, which is used to run the test
 
 
 ## Example test app
-Included in the repository is an example MEAN stack app. It is a simple app with a angular frontend, node.js backend which is used to test against.
+Included in the repository is an example MEAN stack app. It is a simple app with a angular frontend, node.js backend and in memory mongodb server which can be used as the application to test against.
 It's included in the example-test-app folder.

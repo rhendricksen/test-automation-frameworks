@@ -1,0 +1,14 @@
+{
+  "expression": "/api/posts$",
+  "method": "GET",
+  "name": "GET-posts",
+  "responses": {
+    "empty": {
+      "default": true,
+      "file": "mocks/data/GET-posts/posts-empty.json"
+    },
+    "2-items": {
+      "file": "mocks/data/GET-posts/posts-2-items.json"
+    }
+  }
+}

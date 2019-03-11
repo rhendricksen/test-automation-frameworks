@@ -1,0 +1,17 @@
+{
+  "message": "Posts fetched successfully!",
+  "posts": [
+    {
+      "_id": "5c86613a1625dde45b1292b3",
+      "title": "My first post",
+      "content": "Hello world!",
+      "__v": 0
+    },
+    {
+      "_id": "5c8661411625dde45b1292b4",
+      "title": "This is the second post",
+      "content": "2nd!",
+      "__v": 0
+    }
+  ]
+}
