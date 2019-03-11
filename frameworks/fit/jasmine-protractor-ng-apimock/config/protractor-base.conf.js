@@ -2,10 +2,10 @@ const childProcess = require('child_process');
 const os = require('os');
 const path = require('path');
 const HtmlReporter = require('protractor-beautiful-reporter');
-const tsConfig = require('../tsconfig.tst.json');
 
 exports.config = {
   SELENIUM_PROMISE_MANAGER: false,
+  baseUrl: "http://localhost:4200",
   allScriptsTimeout: 11000,
   jasmineNodeOpts: {
     showColors: true,
@@ -18,19 +18,7 @@ exports.config = {
         'disable-infobars'
       ]
     },
-    maxInstances: 2,
-    metadata: {
-      device: 'MacBook Pro 15',
-      platform: {
-        name: 'OSX',
-        version: '10.13'
-      }
-    },
     shardTestFiles: false
-  },
-  params: {
-    resolution: '1280x1024',
-    resolutionName: 'normal'
   },
   directConnect: true,
   framework: 'jasmine2',
@@ -39,9 +27,7 @@ exports.config = {
     hybrid: false
   },
   suites: {
-    student: '../specs/student/**/*.it-spec.ts',
-    teacher: '../specs/teacher/**/*.it-spec.ts',
-    digiboard: '../specs/digiboard/**/*.it-spec.ts'
+    all: '../specs/**/*.it-spec.ts'
   },
   beforeLaunch: () => {
     /* start ngApimock server serving the mocks */
@@ -52,17 +38,8 @@ exports.config = {
   },
   onPrepare: () => {
     require('ts-node').register({
-      project: `${__dirname}/../tsconfig.tst.json`
+      project: `${__dirname}/../tsconfig.json`
     });
-
-    require("tsconfig-paths").register({
-      project: `${__dirname}/../tsconfig.tst.json`,
-      baseUrl: `${__dirname}/../`,
-      paths: tsConfig.compilerOptions.paths
-    });
-
-    /* Set resolution */
-    setResolution();
 
     /* Make ngApimock global */
     global.ngApimock = require('../.tmp/ngApimock/protractor.mock');
@@ -74,7 +51,6 @@ exports.config = {
 
     /* Patches for chrome on macOS */
     patchSchedule();
-    patchSelenium();
 
     /* Add reporter to jasmine */
     const date = new Date();
@@ -109,7 +85,7 @@ exports.config = {
 
 function startNgApimockServer() {
   const server = childProcess.spawn('node', [path.resolve(`${__dirname}/../mocks/server.js`)], {
-    cwd: path.resolve(`${__dirname}/../../..`)
+    cwd: path.resolve(`${__dirname}/..`)
   });
 
   server.stdout.on('data', function (data) {
@@ -160,36 +136,4 @@ function patchChromedriver() {
       }
     });
   }
-}
-
-
-/* Until protractor includes selenium 3.7 or upgrades to 4.0
-   Fix for EPIPE error
-   https://github.com/angular/protractor/issues/4792#issuecomment-419816197 */
-function patchSelenium() {
-
-  if (os.platform() === 'darwin') {
-    const fs = require('fs');
-
-    const seleniumHttp = 'node_modules/selenium-webdriver/http/index.js';
-
-    fs.readFile(seleniumHttp, 'utf8', (err, targetData) => {
-      if (err)
-        throw err;
-
-      if (targetData.match(/err.code === 'ECONNREFUSED';/g) === null) {
-        fs.readFile('fe-it/config/selenium3.7-fix/index.js', 'utf8', (err, sourceData) => {
-          if (err)
-            throw err;
-
-          fs.writeFileSync(seleniumHttp, sourceData, 'utf8');
-        });
-      }
-    });
-  }
-}
-
-function setResolution() {
-  let res = browser.params.resolution.split('x');
-  Promise.resolve(browser.driver.manage().window().setSize(Number(res[0]), Number(res[1])));
 }
