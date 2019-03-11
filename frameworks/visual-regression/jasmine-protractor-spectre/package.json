@@ -1,0 +1,25 @@
+{
+  "name": "jasmine-protractor-spectre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.8",
+    "@types/node": "^10.12.19",
+    "nodeclient-spectre": "^1.0.5",
+    "npm-run-all": "^4.1.5",
+    "protractor": "^5.4.2",
+    "protractor-beautiful-reporter": "^1.2.7",
+    "protractor-cucumber-framework": "^6.1.1",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-defocus": "^2.0.6",
+    "typescript": "^3.2.4"
+  }
+}
