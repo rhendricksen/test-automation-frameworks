@@ -2,18 +2,13 @@
   "name": "jasmine-protractor-ng-apimock",
   "version": "0.0.1",
   "description": "FIT Jasmine protractor ng-apimock framework",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rhendricksen/awesome-test-automation-frameworks.git"
-  },
   "scripts": {
     "lint": "tslint -p ./fe-it/jasmine-protractor-ng-apimock",
     "test": "protractor ./visual-regression/jasmine-protractor-spectre/config/protractor-base.conf.js",
     "update-webdriver": "webdriver-manager update"
   },
   "homepage": "https://github.com/rhendricksen/awesome-test-automation-frameworks/blob/master/frameworks/fit/jasmine-protractor-ng-apimock/README.md",
-  "author": "",
+  "author": "Richard Hendricksen",
   "license": "ISC",
   "devDependencies": {
     "@types/jasmine": "^3.3.8",

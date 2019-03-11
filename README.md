@@ -1,9 +1,9 @@
-# WIP - Awesome test automation frameworks
+# WIP - A collection of test automation frameworks
 This repository contains multiple test frameworks for the integration and ui layer of the testing pyramid.
 The service layer is split up into frontend integration tests and backend integration tests.
 The UI layer consists of end to end testing and visual regression tests.
 A list of different test automation frameworks covering different layers of the test pyramid.
-Included in the repository is an example MEAN stack app, which is used to run the tests against.
+Included in the repository is an example test app, which is used to run the tests against.
 
 ## Test frameworks
 

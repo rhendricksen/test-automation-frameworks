@@ -1,11 +1,10 @@
 {
-  "name": "awesome-test-automation",
+  "name": "test-automation-frameworks",
   "version": "0.0.1",
-  "description": "Awesome test automation frameworks",
-  "main": "index.js",
+  "description": "Collection of test automation frameworks",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhendricksen/awesome-test-automation-frameworks.git"
+    "url": "git+https://github.com/rhendricksen/test-automation-frameworks.git"
   },
   "keywords": [
     "test automation",
@@ -17,9 +16,9 @@
   "author": "Richard Hendricksen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rhendricksen/awesome-test-automation-frameworks/issues"
+    "url": "https://github.com/rhendricksen/test-automation-frameworks/issues"
   },
   "scripts": {
   },
-  "homepage": "https://github.com/rhendricksen/awesome-test-automation-frameworks#readme"
+  "homepage": "https://github.com/rhendricksen/test-automation-frameworks#readme"
 }
