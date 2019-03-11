@@ -6,19 +6,15 @@ import * as typings from '../typings';
 
 const postsOverviewPage = new PostsOverviewPage();
 
-fdescribe('List posts', () => {
+describe('List posts', () => {
 
-  fdescribe('Empty list of posts', () => {
+  describe('Empty list of posts', () => {
 
     describe('When the initial page is opened', () => {
       beforeAll(async () => {
 
-        await browser
-
         await ngApimock.selectScenario('GET-posts', 'empty');
         await postsOverviewPage.open();
-        await browser.sleep(10000000);
-
       });
 
       it('Then it shows an empty list', async () => {
