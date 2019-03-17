@@ -1,15 +1,16 @@
 {
-  "name": "p1-it",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "jasmine-protractor-ng-apimock",
+  "version": "0.0.1",
+  "description": "FIT Jasmine protractor ng-apimock framework",
   "scripts": {
-    "test": "protractor config/protractor-ci.conf.js",
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
+    "postinstall": "webdriver-manager update",
     "pretest": "npm run stop:mock",
-    "postinstall": "webdriver-manager update"
+    "test:ci": "concurrently \"cd ../../../example-test-app && yarn start:frontend\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
+    "test:dev": "protractor config/protractor-base.conf.js"
   },
-  "author": "",
+  "homepage": "https://github.com/rhendricksen/awesome-test-automation-frameworks/blob/master/frameworks/fit/jasmine-protractor-ng-apimock/README.md",
+  "author": "Richard Hendricksen",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -24,13 +25,8 @@
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "ng-apimock": "^1.4.1",
-    "npm-run-all": "^4.1.5",
-    "pretty-quick": "^1.4.1",
     "protractor": "~5.4.0",
     "protractor-beautiful-reporter": "^1.2.1",
-    "protractor-flake": "^4.0.0",
-    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0",
-    "request": "^2.88.0",
     "ts-node": "~7.0.0",
     "tsconfig-paths": "^3.7.0",
     "tslint": "~5.11.0",
