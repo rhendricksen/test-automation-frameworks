@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "protractor config/protractor-base.conf.js",
+    "test": "protractor config/protractor-ci.conf.js",
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
     "pretest": "npm run stop:mock",
     "postinstall": "webdriver-manager update"
