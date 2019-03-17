@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "The frontend integration tests using Cypress for testing and mocking.",
   "scripts": {
-    "cy:run": "node_modules/.bin/cypress run",
-    "cy:open": "node_modules/.bin/cypress open"
+    "cy:run": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "test:ci": "concurrently \"cd ../../../example-test-app && yarn start:frontend\" \"wait-on http-get://localhost:4200 && npx cypress run\" --kill-others --success first"
   },
   "author": "Richard Hendricksen",
   "license": "ISC",

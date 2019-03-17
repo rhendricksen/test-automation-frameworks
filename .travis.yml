@@ -6,3 +6,5 @@ node_js:
 script:
   - cd frameworks/fit/jasmine-protractor-ng-apimock
   - yarn test:ci
+  - cd ../cypress
+  - yarn test:ci
