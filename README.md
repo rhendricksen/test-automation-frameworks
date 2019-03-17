@@ -1,3 +1,4 @@
+[![CI](https://travis-ci.com/rhendricksen/test-automation-frameworks.svg?branch=master)](https://travis-ci.org/rhendricksen/test-automation-frameworks)
 # WIP - A collection of test automation frameworks
 This repository contains multiple test frameworks for the integration and ui layer of the testing pyramid.
 The service layer is split up into frontend integration tests and backend integration tests.
@@ -8,7 +9,7 @@ Included in the repository is an example test app, which is used to run the test
 ## Test frameworks
 
 ### Frontend integration testframeworks (FIT)
-- [Jasmine/Protractor/ng-apimock](frameworks/fit/jasmine-protractor-ng-apimock_old/README.md)
+- [Jasmine/Protractor/ng-apimock](frameworks/fit/jasmine-protractor-ng-apimock/README.md)
 - Webdriverio/mocking/mocha
 - [Cypress](frameworks/fit/cypress/README.md)
 
