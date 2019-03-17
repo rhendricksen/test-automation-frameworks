@@ -40,7 +40,7 @@ exports.config = {
   },
   onPrepare: () => {
     require('ts-node').register({
-      project: `${__dirname}/../tsconfig.tst.json`
+      project: `${__dirname}/../tsconfig.json`
     });
 
     /* Make ngApimock global */
