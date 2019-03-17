@@ -10,6 +10,8 @@
   "author": "Richard Hendricksen",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^3.1.5"
+    "concurrently": "^4.1.0",
+    "cypress": "^3.1.5",
+    "wait-on": "^3.2.0"
   }
 }
