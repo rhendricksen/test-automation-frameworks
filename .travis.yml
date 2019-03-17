@@ -3,8 +3,9 @@ addons:
   chrome: stable
 node_js:
   - "10"
+install:
+  - yarn --cwd frameworks/fit/jasmine-protractor-ng-apimock
+  - yarn --cwd frameworks/fit/cypress
 script:
-  - cd frameworks/fit/jasmine-protractor-ng-apimock
-  - yarn test:ci
-  - cd ../cypress
-  - yarn test:ci
+  - yarn --cwd frameworks/fit/jasmine-protractor-ng-apimock test:ci
+  - yarn --cwd frameworks/fit/cypress test:ci
