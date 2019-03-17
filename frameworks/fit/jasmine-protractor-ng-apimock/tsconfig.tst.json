@@ -9,7 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
-    "outDir": "../../dist/out-tsc/fe-it",
+    "outDir": "../../dist/out-tsc/apps/p1-it",
     "target": "es2017",
     "types": [
       "protractor",

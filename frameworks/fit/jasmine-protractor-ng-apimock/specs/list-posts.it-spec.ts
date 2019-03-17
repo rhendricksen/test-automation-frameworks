@@ -1,8 +1,7 @@
 import { expect } from 'chai';
-import { browser } from 'protractor';
+import * as typings from '../typings';
 
 import { PostsOverviewPage } from '../po/posts-overview.page';
-import * as typings from '../typings';
 
 const postsOverviewPage = new PostsOverviewPage();
 
@@ -34,13 +33,13 @@ describe('List posts', () => {
 
     describe('When the initial page is opened', () => {
       beforeAll(async () => {
-        await ngApimock.selectScenario('GET-posts', 'test');
+        await ngApimock.selectScenario('GET-posts', '2-items');
         await postsOverviewPage.open();
 
       });
 
       it('Then it should show the list of posts', async () => {
-        expect(await postsOverviewPage.getPost(1).getTitle()).to.equal('hello world');
+        expect(await postsOverviewPage.getPost(1).getTitle()).to.equal('My first post');
 
       });
 
