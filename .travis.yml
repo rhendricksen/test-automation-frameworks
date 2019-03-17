@@ -4,6 +4,7 @@ addons:
 node_js:
   - "10"
 install:
+  - yarn --cwd example-test-app
   - yarn --cwd frameworks/fit/jasmine-protractor-ng-apimock
   - yarn --cwd frameworks/fit/cypress
 script:
