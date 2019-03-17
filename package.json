@@ -19,6 +19,12 @@
     "url": "https://github.com/rhendricksen/test-automation-frameworks/issues"
   },
   "scripts": {
+    "postinstall": "cd example-test-app && yarn install && cd ../frameworks/fit/jasmine-protractor-ng-apimock/ && yarn install",
+    "test": "concurrently \"cd example-test-app && yarn start:frontend\" \"wait-on http-get://localhost:4200 && cd frameworks/fit/jasmine-protractor-ng-apimock && yarn test\" --kill-others --success first"
   },
-  "homepage": "https://github.com/rhendricksen/test-automation-frameworks#readme"
+  "homepage": "https://github.com/rhendricksen/test-automation-frameworks#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "wait-on": "^3.2.0"
+  }
 }
