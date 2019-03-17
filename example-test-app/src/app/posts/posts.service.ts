@@ -15,7 +15,7 @@ export class PostsService {
 
   getPosts() {
     this.http
-      .get<{ message: string; posts: any }>("http://localhost:3000/api/posts")
+      .get<{ message: string; posts: any }>("/api/posts")
       .pipe(
         map(postData => {
           return postData.posts.map(post => {
@@ -39,7 +39,7 @@ export class PostsService {
 
   getPost(id: string) {
     return this.http.get<{ _id: string; title: string; content: string }>(
-      "http://localhost:3000/api/posts/" + id
+      "/api/posts/" + id
     );
   }
 
@@ -47,7 +47,7 @@ export class PostsService {
     const post: Post = { id: null, title: title, content: content };
     this.http
       .post<{ message: string; postId: string }>(
-        "http://localhost:3000/api/posts",
+        "/api/posts",
         post
       )
       .subscribe(responseData => {
@@ -62,7 +62,7 @@ export class PostsService {
   updatePost(id: string, title: string, content: string) {
     const post: Post = { id: id, title: title, content: content };
     this.http
-      .put("http://localhost:3000/api/posts/" + id, post)
+      .put("/api/posts/" + id, post)
       .subscribe(response => {
         const updatedPosts = [...this.posts];
         const oldPostIndex = updatedPosts.findIndex(p => p.id === post.id);
@@ -75,7 +75,7 @@ export class PostsService {
 
   deletePost(postId: string) {
     this.http
-      .delete("http://localhost:3000/api/posts/" + postId)
+      .delete("/api/posts/" + postId)
       .subscribe(() => {
         const updatedPosts = this.posts.filter(post => post.id !== postId);
         this.posts = updatedPosts;

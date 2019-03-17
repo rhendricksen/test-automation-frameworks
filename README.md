@@ -8,7 +8,7 @@ Included in the repository is an example test app, which is used to run the test
 ## Test frameworks
 
 ### Frontend integration testframeworks (FIT)
-- [Jasmine/Protractor/ng-apimock](frameworks/fit/jasmine-protractor-ng-apimock/README.md)
+- [Jasmine/Protractor/ng-apimock](frameworks/fit/jasmine-protractor-ng-apimock_old/README.md)
 - Webdriverio/mocking/mocha
 - [Cypress](frameworks/fit/cypress/README.md)
 
