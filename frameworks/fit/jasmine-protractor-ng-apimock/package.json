@@ -6,7 +6,7 @@
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
     "postinstall": "webdriver-manager update",
     "pretest": "npm run stop:mock",
-    "test:ci": "concurrently \"cd ../../../example-test-app && yarn start:frontend\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
+    "test:ci": "concurrently \"yarn --cwd ../../../example-test-app start:frontend\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
     "test:dev": "protractor config/protractor-base.conf.js"
   },
   "homepage": "https://github.com/rhendricksen/awesome-test-automation-frameworks/blob/master/frameworks/fit/jasmine-protractor-ng-apimock/README.md",

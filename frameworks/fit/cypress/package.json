@@ -5,7 +5,7 @@
   "scripts": {
     "cy:run": "npx cypress run",
     "cy:open": "npx cypress open",
-    "test:ci": "concurrently \"cd ../../../example-test-app && yarn start:frontend\" \"wait-on http-get://localhost:4200 && npx cypress run\" --kill-others --success first"
+    "test:ci": "concurrently \"yarn --cwd ../../../example-test-app start:frontend\" \"wait-on http-get://localhost:4200 && npx cypress run\" --kill-others --success first"
   },
   "author": "Richard Hendricksen",
   "license": "ISC",
